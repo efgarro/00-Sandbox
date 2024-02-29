@@ -3,7 +3,7 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  entry: "./src/index.tsx",
+  entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
@@ -28,7 +28,9 @@ const config = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                localIdentName: "[local]_[hash:base64:7]",
+              },
             },
           },
         ],
@@ -38,15 +40,10 @@ const config = {
         test: /\.svg$/,
         use: "file-loader",
       },
-      {
-        test: /\.ts(x)?$/,
-        loader: "ts-loader",
-        exclude: /node_modules/,
-      },
     ],
   },
   devServer: {
-    port: 3500,
+    port: 3000,
     open: true,
   },
   plugins: [
@@ -58,9 +55,6 @@ const config = {
       filename: "index.html",
     }),
   ],
-  resolve: {
-    extensions: [".tsx", ".ts", ".js"],
-  },
 };
 
 module.exports = config;

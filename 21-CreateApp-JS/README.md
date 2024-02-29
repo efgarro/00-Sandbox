@@ -1,4 +1,4 @@
-# empty-project-ts
+# empty-project
 
 Empty project.
 
