@@ -1,4 +1,4 @@
-const webpack = require("webpack");
+// const webpack = require("webpack");
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
@@ -28,7 +28,9 @@ const config = {
             loader: "css-loader",
             options: {
               importLoaders: 1,
-              modules: true,
+              modules: {
+                localIdentName: "[local]_[hash:base64:7]",
+              },
             },
           },
         ],
@@ -51,11 +53,8 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      templateContent: ({ htmlWebpackPlugin }) =>
-        '<!DOCTYPE html><html><head><meta charset="utf-8"><title>' +
-        htmlWebpackPlugin.options.title +
-        '</title></head><body><div id="app"></div></body></html>',
       filename: "index.html",
+      template: "src/template.html",
     }),
   ],
   resolve: {
