@@ -5,7 +5,7 @@ import styles from "./css/styles.module.css";
 const App = () => {
   return (
     <>
-      <h1 className={styles.h1class}>Hello Bella</h1>
+      <h1 className={styles.h1class}>Hello Hook Form</h1>
     </>
   );
 };

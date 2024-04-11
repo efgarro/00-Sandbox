@@ -48,7 +48,7 @@ const config = {
     ],
   },
   devServer: {
-    port: 3501,
+    port: 3546,
     open: {
       app: {
         name: "firefox",
