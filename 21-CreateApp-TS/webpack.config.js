@@ -6,6 +6,7 @@ const config = {
   output: {
     path: path.resolve(__dirname, "dist"),
     filename: "bundle.js",
+    publicPath: "/", //for react-router-dom nested routes to work
   },
   module: {
     rules: [
@@ -47,8 +48,13 @@ const config = {
     ],
   },
   devServer: {
-    port: 3500,
-    open: true,
+    port: 3501,
+    open: {
+      app: {
+        name: "firefox",
+      },
+    },
+    historyApiFallback: true, //for react-router-dom
   },
   plugins: [
     new HtmlWebpackPlugin({

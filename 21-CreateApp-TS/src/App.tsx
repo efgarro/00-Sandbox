@@ -1,10 +1,11 @@
-import * as React from 'react';
-import sty from "./sty.module.css";
+import * as React from "react";
+import "./css/styles.css";
+import styles from "./css/styles.module.css";
 
-const App = ({ name } : {name: string}) => {
+const App = () => {
   return (
     <>
-      <h1 className={sty.h1class}>Hello {name}</h1>
+      <h1 className={styles.h1class}>Hello Bella</h1>
     </>
   );
 };
