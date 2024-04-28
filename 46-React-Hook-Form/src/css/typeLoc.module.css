@@ -1,0 +1,9 @@
+.typeLoc_box {
+  width: 100%;
+}
+
+.typeLoc_pod {
+  flex: 0 0 auto;
+  width: 33.33%;
+  padding: 0 1rem;
+}
