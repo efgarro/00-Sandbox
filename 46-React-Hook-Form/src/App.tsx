@@ -1,7 +1,7 @@
 import * as React from "react";
 import "./css/styles.css";
 import styles from "./css/styles.module.css";
-import { AddResta } from "./components/form/AddResta";
+import { PlaceRegistration } from "./components/form/PlaceRegistration";
 import { ThemeProvider } from "@mui/material/styles";
 import { customTheme } from "./css/customTheme";
 
@@ -30,7 +30,7 @@ const App = () => {
     <ThemeProvider theme={customTheme}>
       <div className="layout_wrapper">
         {/* <h1 className={styles.h1class}>Hello React Hook Form</h1> */}
-        <AddResta />
+        <PlaceRegistration />
       </div>
     </ThemeProvider>
   );

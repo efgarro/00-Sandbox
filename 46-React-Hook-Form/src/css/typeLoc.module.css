@@ -7,3 +7,30 @@
   width: 33.33%;
   padding: 0 1rem;
 }
+
+.baseAttr_box {
+  background-color: beige;
+  width: 100%;
+  /* height: 400px; */
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.baseAttr_wrapper {
+  /* background: #80b8be; */
+  width: clamp(20rem, 85vw, 33.75rem);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  height: 100%;
+}
+.baseAttr_LatLon {
+  gap: 1rem;
+  /* justify-content: space-between; */
+}
+.baseAttr_LatLon > * {
+  flex: 0 1 auto;
+  width: 100%;
+  padding: 0 1rem;
+}
