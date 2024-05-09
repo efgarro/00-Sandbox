@@ -37,7 +37,7 @@ const config = {
         include: /\.module\.css$/,
       },
       {
-        test: /\.svg$/,
+        test: /\.(svg|ico)$/,
         use: "file-loader",
       },
       {
@@ -58,8 +58,9 @@ const config = {
   },
   plugins: [
     new HtmlWebpackPlugin({
-      filename: "index.html",
-      template: "src/template.html",
+      filename: "./index.html",
+      favicon: "./src/favicon.ico",
+      template: "./src/template.html",
     }),
   ],
   resolve: {

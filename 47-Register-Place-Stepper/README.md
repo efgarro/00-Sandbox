@@ -12,6 +12,10 @@ npm install
 
 To create a production build:
 
+
+Ctrl + Shift + R to refresh without cache
+
+
 ```sh
 npm run build-prod
 ```

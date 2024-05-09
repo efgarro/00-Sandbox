@@ -5,4 +5,8 @@ import App from "./App";
 const domNode = document.getElementById("app") as HTMLElement;
 const root = createRoot(domNode);
 
-root.render(<App />);
+root.render(
+  <React.StrictMode>
+    <App />
+  </React.StrictMode>
+);
