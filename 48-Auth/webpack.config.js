@@ -2,7 +2,6 @@ const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
 
 const config = {
-  // cache: false,
   entry: "./src/index.tsx",
   output: {
     path: path.resolve(__dirname, "dist"),
@@ -38,7 +37,7 @@ const config = {
         include: /\.module\.css$/,
       },
       {
-        test: /\.(svg|ico|png)$/,
+        test: /\.(svg|ico)$/,
         use: "file-loader",
       },
       {
@@ -49,7 +48,7 @@ const config = {
     ],
   },
   devServer: {
-    port: 3547,
+    port: 3521,
     open: {
       app: {
         name: "firefox",
