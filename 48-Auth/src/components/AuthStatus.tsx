@@ -9,13 +9,13 @@ const AuthStatus = () => {
     let auth = useAuth();
     let navigate = useNavigate();
   
-    if (!auth.user) {
+    if (!auth.isAuth) {
       return <p>You are not logged in.</p>;
     }
   
     return (
       <p>
-        Welcome {auth.user}!{" "}
+        Welcome {auth.isAuth}!{" "}
         <button
           onClick={() => {
             auth.signout(() => navigate("/"));

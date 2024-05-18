@@ -1,0 +1,14 @@
+import axios from "axios";
+
+const token =
+  "Bearer eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIwMThlMjdlMS01MDBlLTdkNzktOGM3Mi02MGI1ZjExNmFkMTciLCJpYXQiOjE3MTU1MjAyOTQyNDIsImV4cCI6MTcxNTUyMDI5NDMwMn0.LDZTsuCeazbESm4b3K54-h6PGgdOLHw2JSOdFqAnxYUQ0fEXNh3VSgwftieSSSLnqHdZPD6UfsJaTS8-GWhYD7AqaRpJZQzPqC7DRzGfsgYMH3BnpMrbrJ1jYORmrU6eV8M10vbiQcZ7xG2GjcKiHwcO5JR_imiZrvPpRrNTOi_NAlF8rXz0EA7UzdHW1fsPzO1i9D8OSVmAARCktCMetGHsJngRCKjIEUJiZyCrIe9NW3KFtoS2U9RPA6GFYRVEoO2xm3FqSr65Qsf2s9SH07nHsqcWBkcTKWW7xbTO-vgN_NcPPME8k9ibxSTCJsSSSIYx-H-vhIBaQTlCoLtwguJlkP-svt22QF5oHduutCNmvymHc49HUGHnCyW3NrOlSg0p048TYdRq55FbNUQSdL7IqXShuFi6vVmhyvf2Ps2Ko0NHEypJwXnqusY5o28a9iu3oNYt_5bmV1N2Spmr42u7Pu7_aYlCvRpFys-bznKc7frqeo8PpkqZZWmiYLr6jxiW0teBXni0yEM5W0T9_RkJrsYzu823rkK2vpIZoquJpCjGJBqoH-7lrLgxKka49nT0oqyvUweZcf8lVlFrLE2ElqdtbepHxX861b-dGupS6ukYXr81zvyT5CIfLph7duih0CRvNltF58bQFsgeFJADRM_ZNniTlVlIwlSrrZc";
+
+export const authClient = axios.create({ baseURL: "http://localhost:4040" });
+
+authClient.interceptors.request.use((request) => {
+  request.headers.Authorization = token;
+  console.log(request);
+  return request;
+});
+
+export const openClient = axios.create({ baseURL: "http://localhost:4040" });

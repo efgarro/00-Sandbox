@@ -10,33 +10,23 @@ import { LoginPage } from "./components/LoginPage";
 import { RequireAuth } from "./components/RequiredAuth";
 import ProtectedPage from "./components/ProtectedPage";
 
-import { AuthProvider } from "./components/AuthContext";
+import { AuthProvider, useAuth } from "./components/AuthContext";
+import { getUsers } from "./utils/routeHandlers";
+import ErrorPage from "./components/ErrorPage";
 
 export default function App() {
+  const auth = useAuth();
+
+  // React.useEffect(() => {
+  //   getUsers();
+  // });
+
   return (
     <AuthProvider>
-      <h1>Auth Example</h1>
-
-      <p>
-        This example demonstrates a simple login flow with three pages: a public
-        page, a protected page, and a login page. In order to see the protected
-        page, you must first login. Pretty standard stuff.
-      </p>
-
-      <p>
-        First, visit the public page. Then, visit the protected page. You're not
-        yet logged in, so you are redirected to the login page. After you login,
-        you are redirected back to the protected page.
-      </p>
-
-      <p>
-        Notice the URL change each time. If you click the back button at this
-        point, would you expect to go back to the login page? No! You're already
-        logged in. Try it out, and you'll see you go back to the page you
-        visited just *before* logging in, the public page.
-      </p>
       <BrowserRouter>
         <Routes>
+          <Route path="/error" element={<ErrorPage />} />
+
           <Route element={<Layout />}>
             <Route path="/" element={<PublicPage />} />
             <Route path="/login" element={<LoginPage />} />
