@@ -1,8 +1,10 @@
 import * as React from "react";
-import "./css/styles.css";
-import styles from "./css/styles.module.css";
+import "../css/styles.css";
+// import styles from "./css/styles.module.css";
 
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { BrowserRouter, Routes, Route, Outlet, Link } from "react-router-dom";
+
+import AuthStatus from "./AuthStatus";
 
 import Layout from "./Layout";
 import PublicPage from "./PublicPage";
@@ -17,7 +19,7 @@ export default function Dashboard() {
   const auth = useAuth();
 
   return (
-    <AuthProvider>
+    <React.Fragment>
       <h1>Auth Example</h1>
 
       <p>
@@ -38,24 +40,17 @@ export default function Dashboard() {
         logged in. Try it out, and you'll see you go back to the page you
         visited just *before* logging in, the public page.
       </p>
-      <BrowserRouter>
-        <Routes>
-          <Route path="/error" element={<ErrorPage />} />
+      <AuthStatus />
 
-          <Route element={<Layout />}>
-            <Route path="/" element={<PublicPage />} />
-            <Route path="/login" element={<LoginPage />} />
-            <Route
-              path="/protected"
-              element={
-                <RequireAuth>
-                  <ProtectedPage />
-                </RequireAuth>
-              }
-            />
-          </Route>
-        </Routes>
-      </BrowserRouter>
-    </AuthProvider>
+      <ul>
+        <li>
+          <Link to="/public">Public Page</Link>
+        </li>
+        <li>
+          <Link to="/protected">Protected Page</Link>
+        </li>
+      </ul>
+      <Outlet />
+    </React.Fragment>
   );
 }

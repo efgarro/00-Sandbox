@@ -8,11 +8,12 @@ import LoginForm from "./LoginForm";
 function Layout() {
   return (
     <div>
+      
       <AuthStatus />
 
       <ul>
         <li>
-          <Link to="/">Public Page</Link>
+          <Link to="/about">Public Page</Link>
         </li>
         <li>
           <Link to="/protected">Protected Page</Link>

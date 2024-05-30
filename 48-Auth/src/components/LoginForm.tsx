@@ -39,6 +39,7 @@ const LoginForm = () => {
       // user experience.
       navigate(from, { replace: true });
     });
+    // auth.setIsAuth(auth.isLoggedIn());
   };
 
   return (

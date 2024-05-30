@@ -18,6 +18,7 @@ export interface IUser {
 export interface IAuthContext {
   isAuth: boolean;
   setIsAuth: React.Dispatch<React.SetStateAction<boolean>>;
+  isLoggedIn: () => boolean;
   unAuthError: string;
   login: (data: IUser, callback: VoidFunction) => void;
   signout: (callback: VoidFunction) => void;
