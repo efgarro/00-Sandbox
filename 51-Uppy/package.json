@@ -21,6 +21,7 @@
     "@uppy/react": "^3.4.0",
     "@uppy/status-bar": "^3.3.3",
     "@uppy/xhr-upload": "^3.6.7",
+    "exifreader": "^4.23.3",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "uuid": "^10.0.0"

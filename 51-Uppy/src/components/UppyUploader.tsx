@@ -13,7 +13,7 @@ const UppyUploader = () => {
       .use(XHR, {
         endpoint: "http://localhost:4040/upload",
       })
-      .on("file-added", (file) => {
+      .on("file-added", async (file) => {
         console.log(file);
         uppy.setFileMeta(file.id, {
           extension: file.extension,
