@@ -43,6 +43,8 @@ webServer.on("request", async (req, res) => {
   console.log(req.url);
 });
 
+console.log(webServer);
+
 webServer.listen(PORT, () => {
   console.log(`Web Server listening on port ${PORT}`);
 });

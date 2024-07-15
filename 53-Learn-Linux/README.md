@@ -22,6 +22,15 @@ Method 1: Use a terminal window
 
 ```sh
 ssh -i "learn-linux.pem" ubuntu@ec2-100-26-47-1.compute-1.amazonaws.com
+
+ssh -i "mosqtto-user.pem" ubuntu@ec2-3-85-17-83.compute-1.amazonaws.com
+
+psql --host=100.26.47.1 --port=5432 --username=postgres --dbname=template1
+
 ```
 
 The *.pem file has to be set-up before the instance is created. 
+
+## Vim Editor
+
+https://coderwall.com/p/adv71w/basic-vim-commands-for-getting-started
