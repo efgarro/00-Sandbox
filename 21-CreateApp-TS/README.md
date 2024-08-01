@@ -1,3 +1,6 @@
+https://dev.to/alifathy1999/why-should-we-use-typescript-with-nodejs-and-express-gmf#:~:text=Typescript%20is%20an%20enhanced%20version,and%20do%20restructure%20much%20easier.
+
+
 # empty-project-ts
 
 Empty project.
