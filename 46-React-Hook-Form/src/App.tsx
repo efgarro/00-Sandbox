@@ -4,6 +4,7 @@ import styles from "./css/styles.module.css";
 import { PlaceRegistration } from "./components/form/PlaceRegistration";
 import { ThemeProvider } from "@mui/material/styles";
 import { customTheme } from "./css/customTheme";
+import { PhoneInput } from "react-international-phone";
 
 // const theme = createTheme({
 //   palette: {
@@ -26,6 +27,7 @@ import { customTheme } from "./css/customTheme";
 // });
 
 const App = () => {
+  const [phone, setPhone] = React.useState("");
   return (
     <ThemeProvider theme={customTheme}>
       <div className="layout_wrapper">

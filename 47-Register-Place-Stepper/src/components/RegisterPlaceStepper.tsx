@@ -40,6 +40,7 @@ const RegisterPlaceStepper = () => {
 
   return (
     <div className="layout_wrapper">
+      
       <Stepper
         id="mobile-stepper"
         activeStep={activeStep}

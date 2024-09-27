@@ -1,4 +1,5 @@
 import * as z from "zod";
+import { isPhoneValid } from "../components/form/BaseAttributes";
 
 export const schema = z.object({
   place_type: z.string(),
@@ -35,7 +36,16 @@ export const schema = z.object({
           "Invalid LONGITUDE format. Please review that decimals are 6 max and that no alpha characters are included",
       }
     ),
+  mobile: z
+    .string()
+    .refine((val) => isPhoneValid(val), { message: "Phone is invalid" }),
+  food_genre: z.object({ value: z.string(), label: z.string() }),
 });
+
+interface Food_Genre {
+  value: string;
+  label: string;
+}
 
 export interface FormInputs {
   place_type: string;
@@ -45,6 +55,8 @@ export interface FormInputs {
   description: string;
   latitude: string;
   longitude: string;
+  mobile: string;
+  food_genre: Food_Genre;
 }
 
 // export interface IBaseAttrInputs {

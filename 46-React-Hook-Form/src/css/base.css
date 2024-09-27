@@ -8,7 +8,8 @@
   --c-BLblue: #80b8be;
   --c-BLgreen: #b0baa3;
   --c-BLred: #e41e3c;
-  --c-white: #ffffff
+  --c-white: #ffffff;
+  font-family: Quicksand, sans-serif;
   background-color: var(--c-white);
 }
 
