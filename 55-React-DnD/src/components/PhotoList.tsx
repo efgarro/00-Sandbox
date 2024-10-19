@@ -46,7 +46,7 @@ const ITEMS = [
   },
 ];
 
-export const PhotoList: FC = memo(function Container() {
+export const PhotoList: FC = memo(function PhotoList() {
   const [cards, setCards] = useState(ITEMS);
 
   const findCard = useCallback(
