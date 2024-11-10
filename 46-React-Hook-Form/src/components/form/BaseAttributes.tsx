@@ -1,21 +1,12 @@
 import * as React from "react";
-import { TextField, Typography } from "@mui/material";
+import { TextField, Typography, Switch, FormControlLabel } from "@mui/material";
 import { useController, useFormContext } from "react-hook-form";
 import { PhoneInput } from "react-international-phone";
 
+import MobileWhatsApp from "./MobileWhatsApp";
+import useToggle from "../hooks/useToggle";
+
 import Select from "react-select";
-
-import { PhoneNumberUtil } from "google-libphonenumber";
-
-const phoneUtil = PhoneNumberUtil.getInstance();
-
-export const isPhoneValid = (phone: string) => {
-  try {
-    return phoneUtil.isValidNumber(phoneUtil.parseAndKeepRawInput(phone));
-  } catch (error) {
-    return false;
-  }
-};
 
 import styles from "../../css/typeLoc.module.css";
 const rr_baseAttr = 0;
@@ -29,15 +20,18 @@ const BaseAttributes = () => {
   const { field: food_genre } = useController({ name: "food_genre" });
   const { field: latitude } = useController({ name: "latitude" });
   const { field: longitude } = useController({ name: "longitude" });
-  const {
-    field: mobile,
-    fieldState: { isDirty: isDirtyMobile },
-  } = useController({ name: "mobile" });
 
-  const isValid = isPhoneValid(mobile.value);
+  const [isOn, toggle] = useToggle(true);
+
+  // const {
+  //   field: mobile,
+  //   fieldState: { isDirty: isDirtyMobile },
+  // } = useController({ name: "mobile" });
+
+  // const isValid = isPhoneValid(mobile.value);
 
   //   console.log(errors.latitude);
-
+  const isVisible: boolean = true;
   const genreOptions = [
     { value: "white", label: "White" },
     { value: "green", label: "Green" },
@@ -48,7 +42,7 @@ const BaseAttributes = () => {
     <>
       <Select
         {...food_genre}
-        placeholder={'Food Genre'}
+        placeholder={"Food Genre"}
         options={genreOptions}
         classNamePrefix="react-select"
         styles={{
@@ -82,8 +76,22 @@ const BaseAttributes = () => {
           margin="normal"
         />
       </div>
-      {/* <div className={`layout_flexRow ${styles.baseAttr_LatLon}`}> */}
-      <PhoneInput
+      <div className={`layout_flexRow ${styles.phoneAttr}`}>
+        <div className="phoneAttr_toogle">
+          <FormControlLabel
+            control={<Switch defaultChecked onChange={() => toggle()} />}
+            label={
+              <Typography sx={{ fontSize: 14 }}>Mobile/WhatsApp #1</Typography>
+            }
+          />
+        </div>
+        {isOn ? (
+          <div className={`${styles.phoneAttr_case}`}>
+            <MobileWhatsApp />
+          </div>
+        ) : undefined}
+      </div>
+      {/* <PhoneInput
         {...mobile}
         style={{ "--react-international-phone-font-size": "15px" }}
         placeholder="Mobile & WhatsApp"
@@ -94,9 +102,9 @@ const BaseAttributes = () => {
       />
       {isValid ? undefined : isDirtyMobile ? (
         <Typography sx={{ color: "red", fontSize: "13px" }}>
-          Phone is not valid
+          Is Dirty Phone is not valid
         </Typography>
-      ) : undefined}
+      ) : undefined} */}
       {/* {!isValid && <div style={{ color: "red" }}>Phone is not valid</div>} */}
       {errors?.latitude && <p>{errors.latitude.message?.toString()}</p>}
       {errors?.longitude && <p>{errors.longitude.message?.toString()}</p>}

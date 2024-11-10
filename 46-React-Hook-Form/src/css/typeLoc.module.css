@@ -30,7 +30,34 @@
   /* justify-content: space-between; */
 }
 .baseAttr_LatLon > * {
-  flex: 0 1 auto;
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+
   width: 100%;
   padding: 0 1rem;
+}
+
+.properties_phoneCase {
+  height: 2rem;
+  width: 100%;
+}
+
+.phoneAttr {
+  align-items: center;
+  justify-content: space-between;
+  height: 4rem;
+  gap: 1rem;
+}
+.phoneAttr_toogle {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: 50%;
+}
+.phoneAttr_case {
+  flex-grow: 0;
+  flex-shrink: 1;
+  flex-basis: auto;
+  width: max-content;
 }

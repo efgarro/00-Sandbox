@@ -1,5 +1,5 @@
 import * as z from "zod";
-import { isPhoneValid } from "../components/form/BaseAttributes";
+import { isPhoneValid } from "../utils/phoneNumberUtil";
 
 export const schema = z.object({
   place_type: z.string(),
@@ -8,7 +8,7 @@ export const schema = z.object({
   name: z.string(),
   description: z
     .string()
-    .min(20, { message: "Description must be at least 50 chars long" }),
+    .min(20, { message: "Description must be at least 20 chars long" }),
   latitude: z
     .string()
     .regex(
@@ -18,15 +18,6 @@ export const schema = z.object({
           "Invalid LATITUDE format. Please review that decimals are 6 max and that no alpha characters are included",
       }
     ),
-  // .refine(
-  //   (val) => {
-  //     const decimals = val.substring(val.indexOf("."));
-  //     return decimals.length <= 7 ? true : false;
-  //   },
-  //   {
-  //     message: "Can't have more than 6 decimals",
-  //   }
-  // ),
   longitude: z
     .string()
     .regex(
@@ -38,7 +29,10 @@ export const schema = z.object({
     ),
   mobile: z
     .string()
-    .refine((val) => isPhoneValid(val), { message: "Phone is invalid" }),
+    .refine((val) => isPhoneValid(val), {
+      message: "Phone is invalid",
+    })
+    .optional(),
   food_genre: z.object({ value: z.string(), label: z.string() }),
 });
 

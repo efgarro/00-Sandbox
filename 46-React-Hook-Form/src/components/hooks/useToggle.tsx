@@ -9,6 +9,5 @@ export default function useToggle(initialValue: boolean) {
     setOn((v) => !v);
   }, []);
 
-  return [isOn, handleToggle] as const
-
+  return [isOn, handleToggle] as const;
 }
