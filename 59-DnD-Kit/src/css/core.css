@@ -1,0 +1,119 @@
+/* DISPLAY RULES */
+
+.core_flexRow {
+  display: flex;
+  flex-direction: row;
+}
+.core_flexCol {
+  display: flex;
+  flex-direction: column;
+}
+
+/* LAYOUT / CONTAINER RULES */
+
+.core_screen {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #baaca382;
+}
+
+.core_header {
+  width: 100%;
+  height: 63px;
+}
+
+.core_footer {
+  width: 100%;
+  height: 63px;
+}
+
+.core_content {
+  background-color: #941717;
+  opacity: 0.8;
+  flex-basis: 100%;
+}
+
+.core_wrapperSm {
+  width: clamp(20rem, 85vw, 33.75rem); /* 540px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  height: 100%;
+}
+.core_wrapperMd {
+  width: clamp(33.75rem, 85vw, 45rem); /* 720px */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+  height: 100%;
+}
+
+/* Mobile Screen Rules <= 599px */
+
+/* Tablet (medium) Screen Rules >=768px <992px | 720px container*/
+
+@media only screen and (min-device-width: 768px) and (max-device-width: 991px) and (-webkit-min-device-pixel-ratio: 1) {
+  .core_wrapper {
+    width: clamp(45rem, 85vw, 45rem); /* 720px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    height: 100%;
+  }
+
+  .core_sidebar {
+    display: none;
+  }
+}
+
+/* Laptop / Desktop (large) Screen Rules >= 992px | 960px container  */
+
+@media (min-width: 992px) {
+  .core_wrapper {
+    width: clamp(16rem, 85vw, 60rem); /* 960px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    height: 100%;
+  }
+
+  .core_sidebar {
+    background-color: #eeeeee;
+    flex: 0 0 auto;
+    width: 18.75%;
+  }
+
+  .core_contentBox {
+    background: #f5f5f5;
+    width: 100%;
+    min-height: calc(100vh - 126px);
+  }
+}
+
+/* Laptop / Desktop (extra large) Screen Rules >= 1200px | 1140px container */
+
+@media (min-width: 1140px) {
+  .core_wrapper {
+    width: clamp(16rem, 85vw, 71.25rem); /* 1140px */
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    padding-right: clamp(1.09rem, 1rem + 0.47vw, 1.33rem);
+    height: 100%;
+  }
+
+  .core_sidebar {
+    background-color: #eeeeee;
+    flex: 0 0 auto;
+    width: 18.75%;
+  }
+  .core_content {
+    background-color: #f5f5f5;
+    flex: 0 0 auto;
+    width: 81.25%;
+  }
+}
