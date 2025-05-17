@@ -50,6 +50,11 @@
   height: 100%;
 }
 
+.imgCard {
+  flex-basis: 100%;
+  justify-content: space-between;
+}
+
 /* Mobile Screen Rules <= 599px */
 
 /* Tablet (medium) Screen Rules >=768px <992px | 720px container*/

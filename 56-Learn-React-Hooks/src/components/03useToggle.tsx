@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import useToggle from "../hooks/useToggle";
+import useToggle from "../hooks/03useToggle";
 import { IToggleDemoProps } from "../types/hookTypes";
 
 function ToggleDemo({ isOn, toggle }: IToggleDemoProps) {
@@ -38,7 +38,7 @@ export default function HookApp() {
       {/* <button className="link" onClick={() => toggle("nope")}>
         (Also toggles)
       </button> */}
-      <ToggleDemo toggle={toggle} isOn={isOn} />
+      <ToggleDemo isOn={isOn} toggle={toggle}  />
     </section>
   );
 }

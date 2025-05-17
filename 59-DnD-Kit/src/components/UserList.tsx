@@ -35,7 +35,7 @@ const UserList = () => {
           strategy={verticalListSortingStrategy}
           items={listData}
         >
-          <div className="core_wrapperMd">
+          <div className="core_wrapperSm">
             <Stack spacing={2}>
               {listData.map((user: IUser) => (
                 <UserItem user={user} key={user.id} />

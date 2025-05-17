@@ -1,17 +1,17 @@
 {
-    "compilerOptions": {
-        "outDir": "./dist/",
-        "sourceMap": true,
-        "strict": true,
-        "noImplicitReturns": true,
-        "noImplicitAny": true,
-        "module": "es6",
-        "moduleResolution": "node",
-        "target": "es5",
-        "allowJs": true,
-        "jsx": "react",
-    },
-    "include": [
-        "./src/**/*"
-    ]
+  "compilerOptions": {
+    "types": ["./node_modules/network-information-types"],
+    "outDir": "./dist/",
+    "sourceMap": true,
+    "strict": true,
+    // "strictNullChecks": false,
+    "noImplicitReturns": true,
+    "noImplicitAny": true,
+    "module": "es6",
+    "moduleResolution": "node",
+    "target": "es5",
+    "allowJs": true,
+    "jsx": "react"
+  },
+  "include": ["./src/**/*"]
 }

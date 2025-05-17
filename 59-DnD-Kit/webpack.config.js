@@ -1,5 +1,6 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 const config = {
   entry: "./src/index.tsx",
@@ -37,8 +38,9 @@ const config = {
         include: /\.module\.css$/,
       },
       {
-        test: /\.(svg|ico)$/,
+        test: /\.(jpg|JPEG|svg|ico)$/,
         use: "file-loader",
+        // type: "asset/resource",
       },
       {
         test: /\.ts(x)?$/,
@@ -62,6 +64,7 @@ const config = {
       favicon: "./src/favicon.ico",
       template: "./src/template.html",
     }),
+    new CopyPlugin({ patterns: [{ from: "./src/images", to: "images" }] }),
   ],
   resolve: {
     extensions: [".tsx", ".ts", ".js"],

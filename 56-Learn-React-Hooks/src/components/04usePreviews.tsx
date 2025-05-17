@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import usePrevious from "../hooks/usePreviews";
+import usePrevious from "../hooks/04usePreviews";
 import "../css/styles04.css"
 
 function getRandomColor() {

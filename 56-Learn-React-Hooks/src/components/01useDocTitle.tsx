@@ -1,12 +1,12 @@
 import * as React from "react";
-import useDocumentTitle from "../hooks/useDocumentTitle";
+import useDocumentTitle from "../hooks/01useDocumentTitle";
 
 export default function HookApp() {
   const [count, setCount] = React.useState(0);
+  useDocumentTitle(`Clicked ${count} times.`);
 
   const handleClick = () => setCount(count + 1);
 
-  useDocumentTitle(`Clicked ${count} times.`);
 
   return (
     <section>

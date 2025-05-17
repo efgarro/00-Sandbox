@@ -1,6 +1,6 @@
 import * as React from "react";
 
-import useDefault from "../hooks/useDefault";
+import useDefault from "../hooks/02useDefault";
 
 export default function HookApp() {
   const initialState = { name: "Tyler" };
