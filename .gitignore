@@ -1,0 +1,36 @@
+.cache/
+coverage/
+dist/*
+!dist/index.html
+20-ServerApp-JS/node_modules/
+20-ServerApp-TS/node_modules/
+21-CreateApp-JS/node_modules/
+21-CreateApp-TS/node_modules/
+46-React-Hook-Form/node_modules/
+47-Register-Place-Stepper/node_modules/
+48-Auth/node_modules/
+49-Moment-Luxon/node_modules/
+50-Cognito-Auth/node_modules/
+51-Uppy/node_modules/
+51-Uppy/node_modules/
+51-Uppy TS/node_modules/
+53-Learn-Linux/learn-linux.pem
+53-Learn-Linux/mosqtto-user.pem
+55-React-DnD/node_modules/
+56-Learn-React-Hooks/node_modules/
+57-React-Query/node_modules/
+58-React-Table/node_modules/
+59-DnD-Kit/node_modules/
+60-MUI-Modal-GeoLoc/node_modules/
+
+*.log
+*.log
+
+# OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
