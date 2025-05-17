@@ -1,0 +1,30 @@
+.h1class {
+  color: cornsilk;
+  background-color: mediumaquamarine;
+}
+
+.geoloc_podX {
+  gap: 1rem;
+  height: 4.5rem;
+  padding: 0.75rem 0;
+  margin: 0.5rem 0;
+}
+
+.geoloc_podX > * {
+  flex-grow: 1;
+  flex-shrink: 1;
+  flex-basis: 0;
+}
+.geoloc_podX_radio {
+  flex-grow: 0;
+  flex-basis: 12%;
+}
+.geoloc_podX_updateIcon {
+  display: flex;
+  flex-grow: 0;
+  flex-basis: 10%;
+}
+.geoloc_podX_reset {
+  display: flex;
+  justify-content: end;
+}
