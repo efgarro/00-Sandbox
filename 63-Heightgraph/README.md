@@ -24,9 +24,7 @@ To create a development build:
 ```sh
 npm run build-dev
 ```
-```sh
-npx json-server ./data/MOCK_DATA.json -p 4558
-```
+
 ## Running
 
 Open the file `dist/index.html` in your browser

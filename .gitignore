@@ -22,7 +22,9 @@ dist/*
 58-React-Table/node_modules/
 59-DnD-Kit/node_modules/
 60-MUI-Modal-GeoLoc/node_modules/
-
+61-React-Router-v7-Framework
+63-Heightgraph/node_modules/
+64-React-Leaflet/node_modules
 *.log
 *.log
 

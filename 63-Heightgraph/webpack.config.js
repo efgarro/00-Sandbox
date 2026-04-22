@@ -37,11 +37,7 @@ const config = {
         include: /\.module\.css$/,
       },
       {
-        test: /\.(svg|ico|png)$/,
-        use: "file-loader",
-      },
-      {
-        test: /\.(jpeg|jpg)$/,
+        test: /\.(svg|ico)$/,
         use: "file-loader",
       },
       {
@@ -52,7 +48,7 @@ const config = {
     ],
   },
   devServer: {
-    port: 3551,
+    port: 3563,
     open: {
       app: {
         name: "firefox",
@@ -63,7 +59,7 @@ const config = {
   plugins: [
     new HtmlWebpackPlugin({
       filename: "./index.html",
-      favicon: "./src/favicon.png",
+      favicon: "./src/favicon.ico",
       template: "./src/template.html",
     }),
   ],

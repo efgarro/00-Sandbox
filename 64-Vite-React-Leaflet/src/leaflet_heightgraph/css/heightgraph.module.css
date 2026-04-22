@@ -1,0 +1,160 @@
+/* Grid styles */
+.heightgraph-container .grid line {
+  stroke: #d3d3d3;
+  stroke-opacity: 0.7;
+}
+
+.heightgraph-container .grid path {
+  stroke-width: 0;
+}
+
+/* Axes */
+.heightgraph-container .x.axis,
+.heightgraph-container .y.axis {
+  font-size: 11px;
+}
+
+.heightgraph-container .x.axis line,
+.heightgraph-container .y.axis line {
+  stroke: #333;
+}
+
+/* Area chart */
+.heightgraph-container path.area {
+  opacity: 0.7;
+}
+
+/* Border top line */
+.heightgraph-container path.border-top {
+  fill: none;
+  stroke: #333;
+  stroke-width: 1.5;
+}
+
+/* Focus box */
+.heightgraph-container .focusbox {
+  pointer-events: none;
+}
+
+.heightgraph-container .focusbox rect {
+  fill: white;
+  stroke: #ccc;
+  stroke-width: 1;
+}
+
+.heightgraph-container .focusbox text {
+  font-size: 11px;
+  fill: #333;
+}
+
+.heightgraph-container .focusbox .tspan {
+  font-weight: bold;
+  fill: #666;
+}
+
+/* Focus line */
+.heightgraph-container .focusLine line {
+  stroke: #999;
+  stroke-width: 1;
+  stroke-dasharray: 5, 5;
+}
+
+/* Mouse drag rectangle */
+.heightgraph-container .mouse-drag {
+  fill: grey;
+  opacity: 0.5;
+  pointer-events: none;
+}
+
+/* Horizontal line */
+.heightgraph-container .horizontalLine {
+  stroke: black;
+  stroke-width: 2;
+  pointer-events: none;
+}
+
+.heightgraph-container .horizontalLineText {
+  font-size: 11px;
+  fill: black;
+  pointer-events: none;
+}
+
+.heightgraph-container .lineSelection {
+  cursor: grab;
+}
+
+.heightgraph-container .lineSelection.active {
+  fill: #ff0000;
+}
+
+/* Legend */
+.heightgraph-container .legend {
+  font-size: 11px;
+}
+
+.heightgraph-container .legend-text {
+  fill: #333;
+}
+
+.heightgraph-container .legend-rect {
+  stroke-width: 1;
+}
+
+.heightgraph-container .legend-hover text {
+  fill: #333;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 12px;
+}
+
+.heightgraph-container .legend-hover text:hover {
+  fill: #000;
+}
+
+/* Selection controls */
+.heightgraph-container .select-symbol {
+  cursor: pointer;
+}
+
+.heightgraph-container .select-symbol:hover {
+  opacity: 0.7;
+}
+
+.heightgraph-container .select-info {
+  font-size: 11px;
+  fill: #333;
+  font-weight: bold;
+}
+
+/* Height focus (map marker) */
+.height-focus.line {
+  stroke: #ff0000;
+  stroke-width: 2;
+}
+
+.height-focus.circle {
+  fill: #ff0000;
+}
+
+.height-focus.circle-lower {
+  fill: #ff0000;
+  stroke: white;
+  stroke-width: 2;
+}
+
+.height-focus.label rect {
+  fill: white;
+  stroke: #ccc;
+  stroke-width: 1;
+}
+
+.height-focus.label text {
+  font-size: 11px;
+  fill: #333;
+}
+
+.mouse-height-box-text {
+  font-size: 11px;
+  fill: #333;
+  font-weight: bold;
+}
